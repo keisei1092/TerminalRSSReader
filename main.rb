@@ -36,10 +36,10 @@ class TerminalRSSReader
 
       unless feed['latest_title'].empty?
         rss.items.reverse.each_with_index do |item, j|
-          # latest_title＝最新のエントリだったらもう表示しない
           if item.title.force_encoding('UTF-8') == feed['latest_title']
+            # latest_title＝最新のエントリだったらもう表示しない
             viewed_all = true if item.pubDate == rss.items.first.pubDate
-
+            # そうでなければ表示する記事を決定
             k = rss.items.size - (j + 2)
             break
           end
