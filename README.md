@@ -4,6 +4,7 @@ TerminalRSSReader
 ## Usage
 
 ```
-ruby main.rb
+$ bundle install
+$ ruby main.rb
 ```
 
