@@ -87,6 +87,9 @@ class TerminalRSSReader
         feeds[i]['latest_title'] = rss.items[k].title
         File.write('feeds.json', feeds.to_json)
       else
+        # ==============================
+        # このフィードを読了しているとき
+        # =============================
         puts "最後の記事です"
         exit
       end
